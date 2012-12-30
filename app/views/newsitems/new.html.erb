@@ -1,0 +1,11 @@
+<% provide(:title, 'New News Item') %>
+<h1>New News Item</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@newsitem) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Publish Story!", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

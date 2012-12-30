@@ -1,0 +1,10 @@
+<li>
+  <span class="story_title"><%= newsitem.title %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(newsitem.created_at) %> ago.
+  </span>
+  <span class="story_body"><%= newsitem.story_body %></span>
+  <%= link_to "delete", newsitem, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: newsitem.title %>
+</li>

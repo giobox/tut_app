@@ -2,7 +2,13 @@ SmapleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
-
+  
+  #GGCC Resource routing
+  resources :newsitems, only: [:index, :new, :create, :destroy]
+  
+  #GGCC API routing
+  match '/api/news', to: 'newsitems#get'
+  
   root to: 'static_pages#home'
   
   match '/signup',  to: 'users#new'
