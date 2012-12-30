@@ -41,10 +41,10 @@ describe "signup" do
 
     describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "user_name",         with: "Example User"
+        fill_in "user_email",        with: "user@example.com"
+        fill_in "user_password",     with: "foobar"
+        fill_in "user_password_confirmation", with: "foobar"
       end
       describe "after saving the user" do
         before { click_button submit }
