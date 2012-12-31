@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230142051) do
+ActiveRecord::Schema.define(:version => 20121231152926) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(:version => 20121230142051) do
   end
 
   add_index "newsitems", ["user_id", "created_at", "title"], :name => "index_newsitems_on_user_id_and_created_at_and_title"
+
+  create_table "rides", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.float    "distance"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,10 @@
+<li>
+  <span class="story_title"><%= ride.title %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(ride.created_at) %> ago.
+  </span>
+  <span class="authored_by">Posted by <%= ride.user.name %></span>
+  <%= link_to "delete", ride, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: ride.title %>
+</li>

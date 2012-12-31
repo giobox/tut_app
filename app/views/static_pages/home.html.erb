@@ -1,6 +1,7 @@
 <% if signed_in? %>
   <%= link_to "Manage News Stories", newsitems_path, 
                                 class: "btn btn-large btn-primary" %>
+  <%= link_to "Manage Club Rides", rides_path, class: "btn btn-large btn-primary" %>
 <% else %>
   <div class="center hero-unit">
     <h1>GGCC App Configurator</h1>

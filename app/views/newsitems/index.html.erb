@@ -1,6 +1,10 @@
 <% provide(:title, 'GGCC News Stories') %>
 <h1>GGCC News Stories</h1>
- <%= link_to "Add New Story...", new_newsitem_path, class: "btn btn-large btn-primary" %>
+
+<div class="buttonbar">
+	<%= link_to "Add New Story...", new_newsitem_path, class: "btn btn-large btn-primary" %>
+</div>
+ 
 <%= will_paginate %>
 
 <ul class="newsstories">

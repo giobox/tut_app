@@ -1,0 +1,14 @@
+<% provide(:title, 'GGCC Club Rides') %>
+<h1>GGCC Club Rides</h1>
+
+<div class="buttonbar">
+	<%= link_to "Add New Club Run...", new_ride_path, class: "btn btn-large btn-primary" %>
+</div>
+ 
+<%= will_paginate %>
+
+<ul class="rides">
+  <%= render @rides %>
+</ul>
+
+<%= will_paginate %>

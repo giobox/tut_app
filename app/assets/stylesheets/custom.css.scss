@@ -178,10 +178,18 @@ input {
   }
   .story_title {
   	font-size: 1.5em;
+  	color: blue;
   }
   .story_body {
+  padding-top: 10px;
   display:block;
   }
+}
+
+/* Button Bar */
+
+.buttonbar {
+  padding-bottom: 20px;
 }
 
 /* microposts */

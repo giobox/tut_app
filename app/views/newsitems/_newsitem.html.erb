@@ -3,7 +3,8 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(newsitem.created_at) %> ago.
   </span>
-  <span class="story_body"><%= newsitem.story_body %></span>
+  <span class="story_body"><%= simple_format(newsitem.story_body) %></span>
+  <span class="authored_by">Posted by <%= newsitem.user.name %></span>
   <%= link_to "delete", newsitem, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: newsitem.title %>

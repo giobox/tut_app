@@ -1,0 +1,11 @@
+<% provide(:title, 'New Club Ride') %>
+<h1>New Club Ride</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@ride) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Post Ride!", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
